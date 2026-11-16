@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>body{margin:0}img{max-width:100%}</style>
+<title>11412 Mosier Valley Ideas</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: a surveyor's sheet set. One column, each option is a "sheet" with a to-scale plan and a massing view side by side, then the trade-offs. */
+:root{
+  --bg:#f1f4f3; --panel:#fbfcfb; --ink:#17262e; --muted:#566870; --line:#c8d2d0;
+  --accent:#0a6a8f; --flag:#c21f6b; --good:#1f7a4d; --bad:#b3402a;
+  --grass:#d5e3c8; --verge:#c3d4b6; --green:#b4d19f; --road:#98a3a6; --pave:#d9dcdc; --pond:#a9cfe0; --play:#f0dba0;
+  --wallA:#fbf8f0; --wallB:#ddd8cb; --roof:#6d8794; --roof2:#59717d; --tree:#5f9460;
+  --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#10181c; --panel:#172228; --ink:#e2eaec; --muted:#93a5ac; --line:#2e3d44;
+  --accent:#5cc0e6; --flag:#ff6fae; --good:#62c794; --bad:#f08a72;
+  --grass:#2b3f31; --verge:#24352a; --green:#37573a; --road:#4d575b; --pave:#3a454a; --pond:#2c5a70; --play:#6b5a2a;
+  --wallA:#d9dcd6; --wallB:#a9ada6; --roof:#56798a; --roof2:#42606f; --tree:#4f8a55; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#10181c; --panel:#172228; --ink:#e2eaec; --muted:#93a5ac; --line:#2e3d44;
+  --accent:#5cc0e6; --flag:#ff6fae; --good:#62c794; --bad:#f08a72;
+  --grass:#2b3f31; --verge:#24352a; --green:#37573a; --road:#4d575b; --pave:#3a454a; --pond:#2c5a70; --play:#6b5a2a;
+  --wallA:#d9dcd6; --wallB:#a9ada6; --roof:#56798a; --roof2:#42606f; --tree:#4f8a55; color-scheme:dark }
+
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55}
+.wrap{max-width:1080px;margin:0 auto;padding-block:36px 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:44px}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:.01em}
+h1{font-size:clamp(2.3rem,6vw,3.6rem);font-weight:700;text-transform:uppercase}
+h2{font-size:1.9rem;text-transform:uppercase}
+h3{font-size:1.55rem}
+p{margin:0;max-width:68ch}
+a{color:var(--accent)}
+.eyebrow{font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.mono{font-family:var(--mono);font-size:.86em}
+header{display:flex;flex-direction:column;gap:12px;border-bottom:2px solid var(--ink);padding-bottom:22px}
+header p{color:var(--muted);font-size:1.05rem}
+section{display:flex;flex-direction:column;gap:18px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:26px;align-items:start}
+.two>*{min-width:0}
+.stack{display:flex;flex-direction:column;gap:12px}
+ul{margin:0;padding-left:1.15em;display:flex;flex-direction:column;gap:7px}
+li{max-width:66ch}
+
+.read{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--accent);padding:22px 24px;display:flex;flex-direction:column;gap:12px}
+.fix{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:0;border-top:1px solid var(--line)}
+.fix>div{padding:16px 18px 16px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:6px;min-width:0}
+.fix b{font-family:var(--display);font-size:1.25rem;font-weight:600}
+.fix s{color:var(--muted)}
+
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:760px;font-size:.92rem}
+th,td{text-align:left;padding:9px 12px 9px 0;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500;border-bottom:2px solid var(--ink)}
+td.n{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+td a{font-weight:600;text-decoration:none}
+td a:hover{text-decoration:underline}
+.dots{font-family:var(--mono);letter-spacing:.12em;color:var(--accent);white-space:nowrap}
+.tag{display:inline-block;font-family:var(--mono);font-size:.72rem;padding:1px 7px;border:1px solid var(--line);border-radius:3px;color:var(--muted);white-space:nowrap}
+
+.opt{border-top:2px solid var(--ink);padding-top:18px;gap:16px;scroll-margin-top:16px}
+.opthead{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px}
+.letter{font-family:var(--display);font-weight:700;font-size:1.55rem;color:var(--flag)}
+.facts{display:flex;flex-wrap:wrap;gap:6px 26px;font-family:var(--mono);font-size:.82rem;color:var(--muted)}
+.facts b{color:var(--ink);font-weight:500}
+.sheets{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:14px}
+figure{margin:0;background:var(--panel);border:1px solid var(--line);padding:10px 10px 8px;display:flex;flex-direction:column;gap:4px;min-width:0}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.pc h4{font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;margin:0 0 8px;font-weight:500}
+.pro h4{color:var(--good)} .con h4{color:var(--bad)}
+.pc ul{list-style:none;padding:0}
+.pc li{padding-left:1.4em;position:relative}
+.pc li::before{position:absolute;left:0;font-family:var(--mono);font-weight:500}
+.pro li::before{content:"+";color:var(--good)} .con li::before{content:"−";color:var(--bad)}
+.note{font-size:.93rem;color:var(--muted);border-left:2px solid var(--line);padding-left:14px}
+.note b{color:var(--ink)}
+.plays{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:22px}
+.plays>div{display:flex;flex-direction:column;gap:6px;min-width:0;border-top:1px solid var(--line);padding-top:12px}
+.plays p{font-size:.95rem}
+ol{margin:0;padding-left:1.3em;display:flex;flex-direction:column;gap:9px}
+footer{font-size:.85rem;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;display:flex;flex-direction:column;gap:8px}
+
+/* drawing classes */
+svg .site{fill:var(--grass)} svg .verge{fill:var(--verge)} svg .road{fill:var(--road)} svg .pave{fill:var(--pave)}
+svg .green{fill:var(--green)} svg .pond{fill:var(--pond)} svg .play{fill:var(--play)}
+svg .wA{fill:var(--wallA)} svg .wB{fill:var(--wallB)} svg .rf{fill:var(--roof)} svg .rf2{fill:var(--roof2)}
+svg .tr{fill:var(--tree)} svg .ctx{fill:var(--panel)}
+svg .ol{stroke:var(--ink);stroke-width:.7;stroke-linejoin:round}
+svg .thin{stroke:var(--ink);stroke-width:.45;fill:none;opacity:.55}
+svg .pl{fill:none;stroke:var(--flag);stroke-width:1.6;stroke-dasharray:9 3 2 3}
+svg .ll{fill:none;stroke:var(--ink);stroke-width:.9;stroke-dasharray:4 3}
+svg .rw{fill:none;stroke:var(--flag);stroke-width:.9;stroke-dasharray:2 3}
+svg text{font-family:var(--mono);font-size:8.5px;fill:var(--ink)}
+svg text.m{fill:var(--muted)} svg text.f{fill:var(--flag)} svg text.w{fill:var(--panel)}
+svg text.big{font-family:var(--display);font-size:13px;font-weight:600}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <span class="eyebrow">W.L. Lee Survey, A-968 · Fort Worth, Tarrant County · 1.01 ac</span>
+  <h1>11412 Mosier Valley Rd<br>development ideas</h1>
+  <p>Eight ways to build on the acre, each drawn to scale on your March 2026 boundary survey, with what it yields, what it costs you in effort, and where it can go wrong. Plus four plays that don't involve you building anything.</p>
+</header>
+
+<section class="read">
+  <span class="eyebrow">My read</span>
+  <h2>Start with front-and-back homes, keep townhomes as the stretch</h2>
+  <p><b>Option C</b> (four "B" lots, two detached houses on each) gets you 8 doors, uses the deep lots you called wasteful, and keeps every lot a 1&ndash;4 unit property. That means ordinary residential or DSCR loans, no syndication, and you can build one lot first to learn before committing to the rest.</p>
+  <p><b>Option E</b> (about 12 townhomes) is the best yield that still sells one unit at a time to ordinary buyers. It needs a builder partner and real site work. If you find that partner, it beats C.</p>
+  <p>I would not self-develop apartments on one acre with no track record, directly across from a new 300-unit complex with amenities you can't match. If apartments are the goal, assemble more land or sell to someone who does it for a living.</p>
+  <p class="note">All of this depends on one fact I could not confirm from your files: <b>what the parcel is zoned today</b>. Look that up before anything else. It decides which options are a permit and which are a rezoning case.</p>
+</section>
+
+<section>
+  <span class="eyebrow">Three corrections to your notes</span>
+  <h2>What changed when I checked the numbers</h2>
+  <div class="fix">
+    <div><b>The lots are about 185 ft deep, not 210</b>
+      <span>Your boundary runs to the PK nail in the middle of the road. The plats next door show a 25 ft road dedication. Expect the city to take the same from you, leaving roughly 209.7 &times; 185 ft, about 38,700 sq ft or 0.89 acre. Four lots come out near <span class="mono">52.4 &times; 185 = 9,700 sq ft</span>, not 11,000.</span></div>
+    <div><b>Your zoning sheet is from 2013</b>
+      <span>The city's current summary lists higher caps: R2 townhouse up to <span class="mono">24/ac</span> on average <s>(was 12)</s>, CR <span class="mono">16/ac</span> <s>(12)</s>, C <span class="mono">24/ac</span> <s>(18)</s>, D <span class="mono">32/ac</span> <s>(24)</s>. Your "8&ndash;10 townhomes" ceiling is probably too low.</span></div>
+    <div><b>"B" already solves the long-lot problem</b>
+      <span>"B" allows two <em>detached</em> houses on one lot of 7,500 sq ft or more, 50 ft wide. Your lots clear both. A house in front and a house behind fills the depth instead of leaving a 100 ft backyard.</span></div>
+  </div>
+</section>
+
+<section>
+  <span class="eyebrow">Sheet 0 · existing conditions</span>
+  <h2>The site</h2>
+  <div class="two">
+    <figure><div id="ctx"></div><figcaption>Context from the boundary survey · not to scale beyond the parcel</figcaption></figure>
+    <div class="stack">
+      <ul>
+        <li><b>Square parcel</b>, 209.72 ft on every side, 43,982 sq ft gross. Frontage on Mosier Valley Rd along the whole north side.</li>
+        <li><b>Outside the floodplain.</b> The survey places it in FEMA Zone X, unshaded.</li>
+        <li><b>Unplatted.</b> It is described by metes and bounds, so every option below needs a plat before permits.</li>
+        <li><b>North:</b> the new Texas Star Multifamily complex. That is your precedent for density and your competition for renters.</li>
+        <li><b>East:</b> a landscape contractor, then a platted commercial addition. <b>West and south:</b> individually owned tracts.</li>
+        <li><b>Mixed edges cut both ways.</b> Housing, apartments and commercial each have a neighbor to point to, and each has a neighbor who may object.</li>
+      </ul>
+      <p class="note">Yield figures below use the 0.89 net acre. If the city counts density on gross area or asks for less road dedication, the numbers improve slightly.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="eyebrow">Compare</span>
+  <h2>All eight at a glance</h2>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>Option</th><th>Yield</th><th>Zoning</th><th>Uses the depth</th><th>How it gets financed</th><th>Capital</th><th>Approval risk</th><th>Experience needed</th></tr></thead>
+    <tbody id="score"></tbody>
+  </table>
+  </div>
+  <p class="note">Dots run 1 (least) to 5 (most). They are my judgment relative to each other, not measured figures. I left out dollar estimates because I have no construction bids, rents or sale comps for this street; send those and I can build a pro forma.</p>
+</section>
+
+<div id="opts" style="display:flex;flex-direction:column;gap:48px"></div>
+
+<section>
+  <span class="eyebrow">Without building it yourself</span>
+  <h2>Four other plays</h2>
+  <div class="plays">
+    <div><h3>Assemble with a neighbor</h3><p>Your own note says the city will want more land for real multifamily. Adding the tract to the east or west gets you past 2 acres with 420 ft of frontage, which is where a 40&ndash;60 unit project and its lenders start to make sense. Costs you a conversation to find out.</p></div>
+    <div><h3>Entitle and sell</h3><p>Rezone and plat, then sell the lots or the approved site to a builder. You capture the value the paperwork creates and skip construction risk. Lowest capital of anything here; the price is that the builder keeps the construction profit.</p></div>
+    <div><h3>Put the land in as equity</h3><p>Partner with a townhome or small-multifamily builder: you contribute the land, they bring the construction loan and the experience. This answers "funding is a mystery" without a syndication. You give up control and a share of the upside.</p></div>
+    <div><h3>Hold</h3><p>A 300-unit neighbor tends to pull utilities, traffic and attention to a street. Waiting a few years while paying taxes is a legitimate option, especially if the neighbors' tracts may come up for sale.</p></div>
+  </div>
+</section>
+
+<section>
+  <span class="eyebrow">Before you spend on design</span>
+  <h2>Eight things to find out first</h2>
+  <ol>
+    <li><b>Current zoning and future land use.</b> Check the parcel on the City of Fort Worth zoning map. A rezoning that matches the future land use map is far easier than one that fights it.</li>
+    <li><b>Pre-development conference.</b> Ask Development Services about road dedication (Mosier Valley Rd may call for more than 25 ft), required street improvements, driveway spacing and sidewalks.</li>
+    <li><b>Water and sewer.</b> Where the mains are and whether they have capacity. The apartment project probably extended or upsized them, which would help you, but confirm it. Ask for the per-unit impact fees while you are there.</li>
+    <li><b>Stormwater.</b> At 1.01 acres you sit right on the one-acre line that triggers state construction stormwater permitting. Ask whether detention will be required; it takes land out of every plan.</li>
+    <li><b>Airport overlay.</b> DFW Airport is close. Check for noise-contour or overlay restrictions on new housing.</li>
+    <li><b>Title and deed restrictions.</b> Confirm nothing recorded limits use, and that no easements cross the tract. The boundary survey shows none, but it is not a title survey.</li>
+    <li><b>Fire access.</b> Any plan with buildings deep in the lot (C, D, E, F) needs the fire marshal's view on hose reach and fire lanes early.</li>
+    <li><b>The neighborhood.</b> Mosier Valley is a historic freedmen's community with engaged residents. Talk to the council district office and neighbors before filing a zoning case, not after.</li>
+  </ol>
+  <p class="note"><b>One state-law wrinkle:</b> since September 2025, Texas SB 840 requires large cities to allow multifamily and mixed use on land zoned for commercial, office, retail or warehouse use, with exceptions (including sites near airports and heavy industry). If the parcel is or becomes commercially zoned, that could open an apartment path, or change how the city views a commercial rezoning. Ask a land-use attorney how Fort Worth is applying it here.</p>
+</section>
+
+<footer>
+  <span>Sketches are concept massing drawn to scale on the surveyed boundary (A.N.A. Consultants, rev. 03-17-2026) with an assumed 25 ft road dedication and typical 20 ft front, 5 ft side setbacks. They are not engineered site plans. Zoning figures come from the City of Fort Worth zoning district summary and code as found in November 2026; confirm every standard with the city before relying on it.</span>
+  <span>Sources: <a href="https://gisapps.fortworthtexas.gov/Html5Viewer/Files/ZoningDistSummary.pdf">City of Fort Worth zoning district summary</a> · <a href="https://codelibrary.amlegal.com/codes/ftworth/latest/ftworth_tx/0-0-0-33287">Fort Worth Zoning Ordinance, Ch. 4</a> · <a href="https://www.foley.com/insights/publications/2025/07/texas-enacts-critical-real-estate-reforms-senate-bills-15-17-840/">Foley on SB 15 / SB 840</a></span>
+</footer>
+</div>
+
+<script>
+const W=209.72, ROW=25, L=[0,52.43,104.86,157.29,209.72];
+const r1=n=>Math.round(n*10)/10;
+function rep(n,f){const a=[];for(let i=0;i<n;i++)a.push(...f(i,L[i]));return a}
+
+const OPTS=[
+{id:'A',name:'Four single-family homes',zone:'A-5',yield:'4 homes',depth:'No',fin:'Builder construction loan per house',dots:[2,1,1],
+ facts:[['Lots','4 @ 52.4 × 185 ft'],['Lot size','≈ 9,700 sq ft (5,000 min)'],['Height','2 stories']],
+ sum:'Your baseline. Split the frontage four ways and build one house per lot.',
+ pros:['Simplest approval: a plat, and a rezoning only if the land is not already A-5 or similar.','Any local homebuilder can price and build it. Plenty of buyers and lenders understand it.','Build and sell one at a time. You are never more than one house exposed.','The easiest proposal to bring to neighbors on the west and south.'],
+ cons:['Lowest yield for the land. About half of each lot is backyard nobody pays extra for.','Homes face the entrance side of a 300-unit complex, which narrows the owner-occupant buyer pool.','Leaves the most value on the table if the street keeps densifying.'],
+ items:rep(4,(i,u)=>[{t:'pave',u:u+8,v:12,w:16,d:35},{t:'b',u:u+6,v:47,w:40,d:56,h:18,roof:'v',rise:9},{t:'tree',u:u+28,v:140,r:9},{t:'tree',u:u+16,v:182,r:8}]),lots:true},
+
+{id:'B',name:'Four side-by-side duplexes',zone:'B',yield:'8 units',depth:'No',fin:'Residential 1–4 unit or DSCR loan per lot',dots:[3,2,2],
+ facts:[['Lots','4 @ 52.4 × 185 ft'],['Building','42 ft wide, 2 units'],['Min lot','5,000 sq ft for attached pair']],
+ sum:'Same four lots, one two-unit building on each.',
+ pros:['Doubles the doors on the same plat as option A.','Each lot is a 1–4 unit property, so it qualifies for ordinary residential or DSCR financing. No syndication.','Exit is flexible: keep as rentals, or sell building by building to small investors.','Common product in Fort Worth; builders have stock plans.'],
+ cons:['The back 90 ft of every lot is still empty.','Street view is mostly garage doors and driveways.','Needs "B" zoning. If the parcel is zoned something else, that is a rezoning case.','Duplex halves rent and resell below detached homes of the same size.'],
+ items:rep(4,(i,u)=>[{t:'pave',u:u+8,v:12,w:36,d:35},{t:'b',u:u+5.2,v:47,w:42,d:62,h:18,roof:'v',rise:9,split:1},{t:'tree',u:u+26,v:150,r:9},{t:'tree',u:u+14,v:188,r:7}]),lots:true},
+
+{id:'C',name:'Front-and-back homes',zone:'B',yield:'8 homes',depth:'Yes',fin:'Residential 1–4 unit or DSCR loan per lot',dots:[3,2,2],
+ facts:[['Lots','4 @ 52.4 × 185 ft'],['Per lot','2 detached houses'],['Min lot','7,500 sq ft for detached pair']],
+ sum:'Two detached houses per lot, one at the street and one behind, sharing paired driveways.',
+ pros:['Turns the "weirdly long" lots into the reason the plan works.','Eight detached homes, which tend to rent and appraise better than attached units.','Same residential financing as B, lot by lot.','Phases naturally: build the four front houses, add the rear four when cash allows.','Paired driveways mean only two curb cuts on the road.'],
+ cons:['Rear houses sit 100–145 ft back. Fire hose reach and addressing need a check with the city.','Front and rear house share one lot, so they sell together unless you replat.','Long driveways and utility runs add site cost per rear unit.','Rear homes have no street presence and look onto the front homes\' parking.'],
+ items:rep(4,(i,u)=>{const e=i%2===0,hu=e?u+5:u+17.4,du=e?u+38.4:u+2;return[
+   {t:'pave',u:du,v:12,w:12,d:112},{t:'pave',u:hu,v:95,w:30,d:27},
+   {t:'b',u:hu,v:47,w:30,d:44,h:18,roof:'v',rise:8},{t:'b',u:hu,v:126,w:30,d:44,h:18,roof:'v',rise:8},
+   {t:'tree',u:hu+15,v:190,r:7}]}),lots:true},
+
+{id:'D',name:'Cottage court',zone:'R1 cluster or PD',yield:'8 cottages',depth:'Yes',fin:'One commercial loan, or condo regime',dots:[3,3,3],
+ facts:[['Homes','8 @ ≈ 800–1,000 sq ft'],['Common green','42 × 124 ft'],['Parking','Shared court at the street']],
+ sum:'Small detached houses facing a shared green, parked together up front. Built to rent, or sold as condos.',
+ pros:['A different product from the apartments across the road: a yard, a porch, no shared walls.','Uses the whole site and gives every home a front door on the green.','Small footprints keep the cost per house down.','One driveway, one parking court, less paving than eight separate drives.'],
+ cons:['Homes share land, drive and utilities, so it is one 8-unit asset (commercial loan) or a condominium with an HOA.','Less familiar to city staff and lenders. Expect a site plan and more questions.','Parking at the street is the first thing people see.','Private drive, shared utilities and detention are your cost, not the city\'s.'],
+ items:[{t:'pave',u:92,v:12,w:26,d:20},{t:'park',u:30,v:32,w:150,d:40},{t:'green',u:84,v:78,w:42,d:124},
+  ...[80,112,144,176].flatMap(v=>[{t:'b',u:46,v,w:34,d:24,h:11,roof:'u',rise:9},{t:'b',u:130,v,w:34,d:24,h:11,roof:'u',rise:9}]),
+  {t:'tree',u:105,v:100,r:8},{t:'tree',u:105,v:140,r:9},{t:'tree',u:105,v:182,r:8},{t:'tree',u:18,v:120,r:8},{t:'tree',u:192,v:150,r:8}]},
+
+{id:'E',name:'Townhome mews',zone:'R2',yield:'≈ 12 townhomes',depth:'Yes',fin:'Builder loan; units sold individually',dots:[4,3,4],
+ facts:[['Units','12 @ 22 × 40 ft, 3 stories'],['Rows','2 of 6, facing a 26 ft drive'],['R2 cap','24/ac average, 15% open space']],
+ sum:'Two rows of six townhomes facing a private drive down the middle, each on its own fee-simple lot.',
+ pros:['Best yield that still sells one home at a time to buyers with ordinary mortgages.','Financed with builder construction loans and presales, not investor syndication.','Townhomes read as a step-down between 300 apartments and single-family lots. That is a strong rezoning argument.','Fills the depth: the rows run 132 ft back from the street.','The current R2 cap leaves room above 12 if a tighter plan pencils.'],
+ cons:['Real land development: private drive built to fire-lane standard, shared utilities, HOA, probably detention.','More cash goes into the ground before the first closing than in A–C.','Needs a townhome builder or an experienced general contractor. Not a first solo project.','Rezoning to R2 plus a multi-lot plat. Budget several months before permits.'],
+ items:[{t:'pave',u:92,v:12,w:26,d:180},{t:'pave',u:70,v:50,w:22,d:132},{t:'pave',u:118,v:50,w:22,d:132},{t:'park',u:60,v:186,w:90,d:19},
+  {t:'b',u:30,v:50,w:40,d:132,h:30,roof:'flat',div:6,axis:'v'},{t:'b',u:140,v:50,w:40,d:132,h:30,roof:'flat',div:6,axis:'v'},
+  {t:'tree',u:14,v:70,r:7},{t:'tree',u:14,v:120,r:7},{t:'tree',u:14,v:170,r:7},{t:'tree',u:196,v:70,r:7},{t:'tree',u:196,v:120,r:7},{t:'tree',u:196,v:170,r:7}]},
+
+{id:'F',name:'Small apartment buildings',zone:'CR or C',yield:'14–21 units',depth:'Yes',fin:'Commercial construction loan plus equity partners',dots:[5,4,5],
+ facts:[['Buildings','2 three-story walk-ups'],['CR / C cap','16 / 24 per acre'],['Open space','45% min in C']],
+ sum:'Two three-story walk-ups around a surface lot, with detention and open space at the back.',
+ pros:['Most doors on the acre. About 14 under CR and up to about 21 under C.','The complex across the road is direct precedent for multifamily on this street.','One asset, one loan, one manager.','The plan keeps a 55 ft green buffer to the neighbor on the south.'],
+ cons:['Needs a multifamily development permit and the city\'s design standards, on top of rezoning.','Parking and the 45% open-space rule cap a one-acre site well below what "D" allows on paper.','Awkward size: too big for residential loans, too small for most apartment lenders and managers.','You would compete for renters with a new complex that has a pool, a gym and a leasing office.','Commercial-code construction, personal guarantees and investor reporting, with no prior project to show lenders.','Taller buildings next to houses usually draw larger setbacks and the hardest neighborhood meeting.'],
+ items:[{t:'pave',u:124,v:12,w:24,d:82},{t:'park',u:20,v:92,w:128,d:60},{t:'pond',u:40,v:164,w:110,d:32},
+  {t:'b',u:20,v:47,w:100,d:34,h:32,roof:'flat',div:3,axis:'u'},{t:'b',u:154,v:92,w:34,d:100,h:32,roof:'flat',div:3,axis:'v'},
+  {t:'tree',u:20,v:180,r:8},{t:'tree',u:170,v:66,r:7},{t:'tree',u:176,v:200,r:7}]},
+
+{id:'G',name:'Small-bay flex building',zone:'Commercial / light industrial',yield:'≈ 8,700 sq ft, 6 bays',depth:'Yes',fin:'Commercial or SBA loan',dots:[4,4,3],
+ facts:[['Building','150 × 58 ft, one story'],['Bays','6 @ 25 ft with roll-up doors'],['Yard','Paved court in front']],
+ sum:'A single-story shell split into contractor and small-business bays, matching the landscape yard and commercial plat to the east.',
+ pros:['Continues what is already next door on the east side.','A simple shell building. Cheaper per square foot and faster than housing.','Tenants usually pay taxes, insurance and maintenance. Light management.','Small bays for trades have leased well across DFW in recent years.'],
+ cons:['Rezoning toward industrial across from new apartments and beside houses is the hardest case on this list.','Screening and buffer yards against residential neighbors eat into the site.','Truck traffic on a road now serving 300 households will be raised at every hearing.','Fewer buyers when you want out, and value depends on keeping bays leased.','Commercially zoned land may now also be open to multifamily under state law. See the note near the end.'],
+ items:[{t:'pave',u:92,v:12,w:28,d:30},{t:'park',u:10,v:42,w:190,d:88},
+  {t:'b',u:30,v:132,w:150,d:58,h:22,roof:'flat',div:6,axis:'u'},{t:'tree',u:14,v:200,r:6},{t:'tree',u:196,v:200,r:6}]},
+
+{id:'H',name:'Neighborhood retail or daycare',zone:'E',yield:'≈ 6,400 sq ft',depth:'Partly',fin:'Commercial loan, ideally with a signed tenant',dots:[4,3,3],
+ facts:[['Building','110 × 58 ft, one story'],['Parking','≈ 35 spaces in front'],['Yard','Fenced play area or patio']],
+ sum:'A small commercial building serving the households across the road: daycare, convenience retail, or a clinic.',
+ pros:['Three hundred new households with no services on the street are a ready customer base.','A daycare or single tenant can sign before you build, which makes the loan far easier.','Neighborhood-serving uses are an easier rezoning story than industrial.','A long lease to one operator is close to passive.'],
+ cons:['Mosier Valley Rd may not carry enough traffic for retail. Do not build without a tenant in hand.','Parking takes most of the site.','One tenant means 100% vacancy when they leave.','Commercial lending and commercial-code construction, same as G.'],
+ items:[{t:'pave',u:150,v:12,w:26,d:30},{t:'park',u:15,v:42,w:180,d:72},
+  {t:'b',u:15,v:122,w:110,d:58,h:18,roof:'flat'},{t:'play',u:135,v:124,w:60,d:54},{t:'tree',u:150,v:195,r:7},{t:'tree',u:60,v:196,r:7},{t:'tree',u:186,v:150,r:6}]}
+];
+
+/* ---------- plan view ---------- */
+function planSVG(o){
+  const s=1.9,mx=26,mt=30,X=u=>r1(mx+u*s),Y=v=>r1(mt+(v+14)*s),R=(c,u,v,w,d,x='')=>`<rect class="${c}" x="${X(u)}" y="${Y(v)}" width="${r1(w*s)}" height="${r1(d*s)}" ${x}/>`;
+  const VW=r1(W*s+2*mx),VH=r1(mt+(W+14)*s+24);let h='';
+  h+=`<rect class="road" x="0" y="${Y(-14)}" width="${VW}" height="${r1(26*s)}"/>`;
+  h+=R('verge',0,12,W,13)+R('site',0,25,W,W-25);
+  for(const k of o.items){
+    if(k.t==='pave')h+=R('pave',k.u,k.v,k.w,k.d);
+    if(k.t==='park'){h+=R('pave',k.u,k.v,k.w,k.d);
+      const both=Math.min(k.w,k.d)>=58;
+      for(let x=k.u+9;x<k.u+k.w-1;x+=9){h+=`<line class="thin" x1="${X(x)}" y1="${Y(k.v)}" x2="${X(x)}" y2="${Y(k.v+18)}"/>`;if(both)h+=`<line class="thin" x1="${X(x)}" y1="${Y(k.v+k.d-18)}" x2="${X(x)}" y2="${Y(k.v+k.d)}"/>`}}
+    if(k.t==='green'||k.t==='pond'||k.t==='play')h+=R(k.t+' ol',k.u,k.v,k.w,k.d,'rx="5"');
+  }
+  for(const k of o.items){
+    if(k.t==='tree')h+=`<circle class="tr" cx="${X(k.u)}" cy="${Y(k.v)}" r="${r1(k.r*s)}" opacity=".8"/>`;
+    if(k.t==='b'){h+=R('rf ol',k.u,k.v,k.w,k.d);
+      if(k.roof==='v')h+=`<line class="thin" x1="${X(k.u+k.w/2)}" y1="${Y(k.v)}" x2="${X(k.u+k.w/2)}" y2="${Y(k.v+k.d)}" ${k.split?'style="opacity:1;stroke-width:1.1"':''}/>`;
+      if(k.roof==='u')h+=`<line class="thin" x1="${X(k.u)}" y1="${Y(k.v+k.d/2)}" x2="${X(k.u+k.w)}" y2="${Y(k.v+k.d/2)}"/>`;
+      if(k.div)for(let i=1;i<k.div;i++){h+=k.axis==='v'?`<line class="thin" x1="${X(k.u)}" y1="${Y(k.v+k.d*i/k.div)}" x2="${X(k.u+k.w)}" y2="${Y(k.v+k.d*i/k.div)}"/>`:`<line class="thin" x1="${X(k.u+k.w*i/k.div)}" y1="${Y(k.v)}" x2="${X(k.u+k.w*i/k.div)}" y2="${Y(k.v+k.d)}"/>`}}
+  }
+  if(o.lots)for(let i=1;i<4;i++)h+=`<line class="ll" x1="${X(L[i])}" y1="${Y(25)}" x2="${X(L[i])}" y2="${Y(W)}"/>`;
+  h+=`<line class="rw" x1="${X(0)}" y1="${Y(25)}" x2="${X(W)}" y2="${Y(25)}"/>`;
+  h+=R('pl',0,0,W,W);
+  h+=`<text class="w" x="${X(4)}" y="${Y(-5)}">MOSIER VALLEY RD</text>`;
+  h+=`<text class="f" x="${X(W)}" y="${Y(21.5)}" text-anchor="end" dx="-3">25′ road dedication (assumed)</text>`;
+  h+=`<text x="${X(W/2)}" y="${mt-18}" text-anchor="middle">209.72′</text><path class="thin" style="opacity:1" d="M${X(0)} ${mt-12}H${X(W)}M${X(0)} ${mt-16}v8M${X(W)} ${mt-16}v8"/>`;
+  h+=`<text transform="translate(${mx-12} ${Y(117)}) rotate(-90)" text-anchor="middle">≈185′ net</text><path class="thin" style="opacity:1" d="M${mx-8} ${Y(25)}V${Y(W)}M${mx-12} ${Y(25)}h8M${mx-12} ${Y(W)}h8"/>`;
+  h+=`<path class="thin" style="opacity:1" d="M${X(0)} ${VH-10}h${r1(50*s)}M${X(0)} ${VH-13}v6M${X(50)} ${VH-13}v6"/><text class="m" x="${X(50)+5}" y="${VH-7}">50 ft</text>`;
+  h+=`<text class="m" x="${X(W)}" y="${VH-7}" text-anchor="end">N ↑</text>`;
+  return `<svg viewBox="0 0 ${VW} ${VH}" role="img" aria-label="Site plan, option ${o.id}: ${o.name}">${h}</svg>`;
+}
+
+/* ---------- massing view (isometric, seen from the northwest above the road) ---------- */
+function isoSVG(o){
+  const k=1.2,c=.866,ox=236,oy=62;
+  const P=(u,v,z=0)=>r1(ox+(u-v)*c*k)+','+r1(oy+((W-v)+(W-u))*.5*k-z*k);
+  const poly=(cls,pts)=>`<polygon class="${cls}" points="${pts.map(p=>P(...p)).join(' ')}"/>`;
+  const flat=(cls,u,v,w,d,z=0)=>poly(cls,[[u,v,z],[u+w,v,z],[u+w,v+d,z],[u,v+d,z]]);
+  const line=(cls,a,b,x='')=>{const[p,q]=[P(...a).split(','),P(...b).split(',')];return `<line class="${cls}" x1="${p[0]}" y1="${p[1]}" x2="${q[0]}" y2="${q[1]}" ${x}/>`};
+  let h=flat('road',-8,-14,W+16,26)+flat('verge',0,12,W,13)+flat('site ol',0,25,W,W-25);
+  for(const q of o.items){
+    if(q.t==='pave'||q.t==='park')h+=flat('pave',q.u,q.v,q.w,q.d);
+    if(q.t==='green'||q.t==='pond'||q.t==='play')h+=flat(q.t+' ol',q.u,q.v,q.w,q.d);
+  }
+  if(o.lots)for(let i=1;i<4;i++)h+=line('ll',[L[i],25,0],[L[i],W,0]);
+  h+=line('rw',[0,25,0],[W,25,0])+flat('pl',0,0,W,W);
+  const objs=o.items.filter(q=>q.t==='b'||q.t==='tree').map(q=>({q,key:q.t==='b'?q.u+q.w/2+q.v+q.d/2:q.u+q.v})).sort((a,b)=>b.key-a.key);
+  for(const {q} of objs){
+    if(q.t==='tree'){const[x,y]=P(q.u,q.v,13).split(',');h+=line('thin',[q.u,q.v,0],[q.u,q.v,10],'style="opacity:1;stroke-width:1.2"')+`<circle class="tr ol" cx="${x}" cy="${y}" r="${r1(q.r*k*.85)}"/>`;continue}
+    const u0=q.u,u1=q.u+q.w,v0=q.v,v1=q.v+q.d,z=q.h,um=(u0+u1)/2,vm=(v0+v1)/2,t=z+(q.rise||0);
+    h+=poly('wA ol',[[u0,v0,0],[u1,v0,0],[u1,v0,z],[u0,v0,z]])+poly('wB ol',[[u0,v0,0],[u0,v1,0],[u0,v1,z],[u0,v0,z]]);
+    if(q.roof==='flat'){h+=poly('rf ol',[[u0,v0,z],[u1,v0,z],[u1,v1,z],[u0,v1,z]])}
+    if(q.roof==='u'){h+=poly('rf2 ol',[[u0,v1,z],[u1,v1,z],[u1,vm,t],[u0,vm,t]])+poly('rf ol',[[u0,v0,z],[u1,v0,z],[u1,vm,t],[u0,vm,t]])+poly('wB ol',[[u0,v0,z],[u0,v1,z],[u0,vm,t]])}
+    if(q.roof==='v'){h+=poly('rf2 ol',[[u1,v0,z],[u1,v1,z],[um,v1,t],[um,v0,t]])+poly('rf ol',[[u0,v0,z],[u0,v1,z],[um,v1,t],[um,v0,t]])+poly('wA ol',[[u0,v0,z],[u1,v0,z],[um,v0,t]]);
+      if(q.split)h+=line('thin',[um,v0,0],[um,v0,t],'style="opacity:1"')}
+    if(q.div)for(let i=1;i<q.div;i++){
+      if(q.axis==='v'){const v=v0+q.d*i/q.div;h+=line('thin',[u0,v,0],[u0,v,z])+line('thin',[u0,v,z],[u1,v,z])}
+      else{const u=u0+q.w*i/q.div;h+=line('thin',[u,v0,0],[u,v0,z])+line('thin',[u,v0,z],[u,v1,z])}}
+    const fl=Math.round(z/10);if(fl>1)for(let f=1;f<fl;f++){h+=line('thin',[u0,v0,z*f/fl],[u1,v0,z*f/fl],'style="opacity:.3"')+line('thin',[u0,v0,z*f/fl],[u0,v1,z*f/fl],'style="opacity:.3"')}
+  }
+  const[tx,ty]=P(70,3,0).split(',');
+  h+=`<text class="w" transform="translate(${tx} ${ty}) rotate(-30)">MOSIER VALLEY RD</text>`;
+  return `<svg viewBox="0 0 472 330" role="img" aria-label="Massing sketch, option ${o.id}: ${o.name}">${h}</svg>`;
+}
+
+/* ---------- context diagram ---------- */
+(function(){
+  const s=1.15,mx=92,mt=74,X=u=>r1(mx+u*s),Y=v=>r1(mt+v*s),VW=r1(W*s+mx*2),VH=r1(W*s+mt+58);
+  let h=`<rect class="ctx ol" x="${X(-70)}" y="4" width="${r1((W+140)*s)}" height="${mt-22}"/>`;
+  h+=`<text class="big" x="${VW/2}" y="26" text-anchor="middle">TEXAS STAR MULTIFAMILY</text><text class="m" x="${VW/2}" y="40" text-anchor="middle">300+ apartments, newly built</text>`;
+  h+=`<rect class="road" x="0" y="${Y(-12)}" width="${VW}" height="${r1(24*s)}"/><text class="w" x="8" y="${Y(3)}">MOSIER VALLEY RD</text>`;
+  h+=`<rect class="ctx ol" x="2" y="${Y(12)}" width="${mx-2}" height="${r1((W-12)*s)}"/><rect class="ctx ol" x="${X(W)}" y="${Y(12)}" width="${mx-2}" height="${r1((W-12)*s)}"/>`;
+  h+=`<rect class="ctx ol" x="2" y="${Y(W)}" width="${VW-4}" height="50"/>`;
+  h+=`<rect class="site" x="${X(0)}" y="${Y(12)}" width="${r1(W*s)}" height="${r1((W-12)*s)}"/><rect class="pl" x="${X(0)}" y="${Y(0)}" width="${r1(W*s)}" height="${r1(W*s)}"/>`;
+  h+=`<line class="rw" x1="${X(0)}" y1="${Y(25)}" x2="${X(W)}" y2="${Y(25)}"/>`;
+  h+=`<text class="big" x="${VW/2}" y="${Y(100)}" text-anchor="middle">YOUR TRACT</text><text x="${VW/2}" y="${Y(114)}" text-anchor="middle">43,982 sq ft gross</text><text x="${VW/2}" y="${Y(126)}" text-anchor="middle">≈ 38,700 sq ft after dedication</text>`;
+  h+=`<text class="f" x="${VW/2}" y="${Y(36)}" text-anchor="middle">25′ dedication line (assumed)</text>`;
+  h+=`<text x="${VW/2}" y="${Y(W)-5}" text-anchor="middle">209.72′</text><text transform="translate(${X(0)+11} ${Y(120)}) rotate(-90)" text-anchor="middle">209.72′</text>`;
+  h+=`<text class="m" transform="translate(48 ${Y(112)}) rotate(-90)" text-anchor="middle">Private tract (Paker)</text>`;
+  h+=`<text class="m" transform="translate(${X(W)+34} ${Y(112)}) rotate(-90)" text-anchor="middle">Burris Lawn &amp; Landscape</text><text class="m" transform="translate(${X(W)+50} ${Y(112)}) rotate(-90)" text-anchor="middle">then commercial addition</text>`;
+  h+=`<text class="m" x="${VW/2}" y="${Y(W)+28}" text-anchor="middle">Private tract (Brown)</text><text class="m" x="${VW-8}" y="${Y(W)+42}" text-anchor="end">N ↑</text>`;
+  document.getElementById('ctx').innerHTML=`<svg viewBox="0 0 ${VW} ${VH}" role="img" aria-label="The parcel and its neighbors">${h}</svg>`;
+})();
+
+/* ---------- render ---------- */
+const dots=n=>`<span class="dots" aria-label="${n} of 5">${'●'.repeat(n)}${'○'.repeat(5-n)}</span>`;
+document.getElementById('score').innerHTML=OPTS.map(o=>`<tr><td><a href="#opt-${o.id}"><span style="color:var(--flag)">${o.id}</span>&ensp;${o.name}</a></td><td class="n">${o.yield}</td><td><span class="tag">${o.zone}</span></td><td>${o.depth}</td><td>${o.fin}</td><td>${dots(o.dots[0])}</td><td>${dots(o.dots[1])}</td><td>${dots(o.dots[2])}</td></tr>`).join('');
+document.getElementById('opts').innerHTML=OPTS.map(o=>`
+<section class="opt" id="opt-${o.id}">
+  <div class="opthead"><span class="letter">${o.id}</span><h3>${o.name}</h3><span class="tag">${o.zone}</span><span class="tag">${o.yield}</span></div>
+  <p>${o.sum}</p>
+  <div class="sheets">
+    <figure>${planSVG(o)}<figcaption>Plan · 1 in ≈ 50 ft</figcaption></figure>
+    <figure>${isoSVG(o)}<figcaption>Massing sketch · from above the road, looking southeast</figcaption></figure>
+  </div>
+  <div class="facts">${o.facts.map(f=>`<span>${f[0]} <b>${f[1]}</b></span>`).join('')}<span>Financing <b>${o.fin}</b></span></div>
+  <div class="two pc">
+    <div class="pro"><h4>For</h4><ul>${o.pros.map(p=>`<li>${p}</li>`).join('')}</ul></div>
+    <div class="con"><h4>Against</h4><ul>${o.cons.map(p=>`<li>${p}</li>`).join('')}</ul></div>
+  </div>
+</section>`).join('');
+</script>
+</body>
+</html>
